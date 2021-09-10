@@ -17,7 +17,7 @@ CONTRIBUTERS:               Kilgore Trout
 USER INSTRUCTIONS:
 
 
-1) Start git bash (assuming that you are using git bash). 
+1) Start git bash (assuming that you are using git bash) or terminal (MacOS). 
 NOTE: Each class build-master should fork the main repo to a new repo before starting. Names below should be updated accordingly
 
 2) Move to a directory where you want to keep your work. For instance, cd c:/ then cd Users/YourName/Documents/Assignments
@@ -35,25 +35,26 @@ NOTE: This should set up all initial conditions for GIT and avoid a lot of confu
 PLEASE DO NOT COMMIT YOUR FILES IF THEY DO NOT COMPILE LOCALLY!!!!! Work with your build master! I will provide the current
 version of the seating chart in Canvas, so that you know where you should be seated.
 =====================================================================
+6) Create a new branch
+ git checkout -b `branchname` 
+ 
+7) (Start making your changes)
 
-git add FirstLast.java
-git add images/firstlast.jpg
-git add sounds/firstlast.wav
+8) Add all your files to staging
+git add .
 
-(Files are case sensitive!!!)
-
-6) Check to see what has been staged (from the git command line):
+9) Check to see what has been staged (from the git command line):
 
 git status
 
-7) Commit your changes from the git command line:
+10) Commit your changes from the git command line:
 
-git commit -m “adding my files to the repository”
+git commit -m “descriptive commit message”
 
-8) Push your changes to the remote repository (each period should have their own cloned or branched version to work with.
+11) Push your changes to the remote repository (each period should have their own cloned or branched version to work with.
 Do not commit back to the master repo:
 
-git push
+git push origin `branchname`
 
 
 ASSIGNMENT INSTRUCTIONS IN BRIEF
