@@ -95,6 +95,7 @@ public class MeghaSuresh extends Student implements SpecialInterestOrHobby
      * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
+    //test comment 
     public void rideBike(){
         setLocation(0,0);
         Greenfoot.delay(10);
