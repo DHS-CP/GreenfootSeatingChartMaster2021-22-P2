@@ -112,13 +112,12 @@ public class EileenXu extends Student
             Greenfoot.delay(7);
         }
         // jukes
-        setImage(leftFile);
-        Greenfoot.delay(5);
-        setImage(rightFile);
-        Greenfoot.delay(5);
-        setImage(leftFile);
-        Greenfoot.delay(5);
-        setImage(rightFile);
+        for (int i=0; i<3;i++){
+            setImage(leftFile);
+            Greenfoot.delay(10);
+            setImage(rightFile);
+            Greenfoot.delay(10);
+        }
         //move right
         for (int i=4;i<=7;i++){
             setLocation(i,5);
