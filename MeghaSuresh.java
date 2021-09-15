@@ -41,8 +41,8 @@ public class MeghaSuresh extends Student implements SpecialInterestOrHobby
     public MeghaSuresh() {
         firstName="Megha";
         lastName="Suresh";
-        mySeatX=7;
-        mySeatY=11;
+        mySeatX=6;
+        mySeatY=10;
         // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
         portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
