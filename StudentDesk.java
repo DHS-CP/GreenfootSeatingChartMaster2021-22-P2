@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class StudentDesk here.
  * 
  * @author Eileen Xu, Arin Shah, Megha Suresh, and Advait Shewade
- * @version (a version number or a date)
+ * @version September 13, 2021
  */
 public class StudentDesk extends Actor
 {
