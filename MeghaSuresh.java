@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The KilgoreTrout class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
- * @author Mr. Kaehms
+ * 
+ * @author Megha Suresh
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
@@ -15,8 +15,8 @@ public class MeghaSuresh extends Student implements SpecialInterestOrHobby
      * Constructors to not have return types.
      * Constructors can be overloaded. This means we can call a constructor with different sets of parameter
      *  lists to initalize for different conditions (depending on what constructors have been written.
-     * @param String f (firstname)
-     * @param String l (lastname)
+     * @param String m (firstname)
+     * @param String n (lastname)
      * @param int r (row of seating arrangement)
      * @param int s (seat number within row seating arrangement)
      * 
@@ -26,18 +26,13 @@ public class MeghaSuresh extends Student implements SpecialInterestOrHobby
         lastName=n;
         mySeatX=r;
         mySeatY=s;
-        portraitFile=m.toLowerCase()+n.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
+        portraitFile=m.toLowerCase()+n.toLowerCase()+".jpg";    
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
-        soundFile=m.toLowerCase()+n.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
+        soundFile=m.toLowerCase()+n.toLowerCase()+".wav";  
         setImage(portraitFile);
         sitting=true;
     }
 
-    /**
-     * Default constructor, if you don't pass in a name and seating location
-     * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
-     * of the classroom.
-     */
     public MeghaSuresh() {
         firstName="Megha";
         lastName="Suresh";
@@ -57,7 +52,6 @@ public class MeghaSuresh extends Student implements SpecialInterestOrHobby
      */   
     public void act() 
     {
-        // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
             //  if (sitting){
             sitting=false;
@@ -67,11 +61,8 @@ public class MeghaSuresh extends Student implements SpecialInterestOrHobby
             sayName(soundFile);
 
             myHobby("I like to sleep!");
-            // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
-            // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
-            // Call the sitDown() method to move back  to your seat
 
-            rideBike();  // Megha Suresh's special method... Please write one of your own. You can use this, but please modify it and be creative.
+            rideBike();  // Megha Suresh's special method
 
             sitDown();
         }
@@ -84,18 +75,7 @@ public class MeghaSuresh extends Student implements SpecialInterestOrHobby
     public void getName(){
         System.out.println("My name is " + firstName + " " + lastName);
     }
-    /**
-     * This method needs to allow the user to interact with the student through a question and answer interface, and provide
-     * some mechanism that allows the student to sit down once the Q&A session ends.  You can use this basic model, or come up
-     * with some additional class and object that represents a blackboard, or a talking cartoon bubble etc. If you provide extra
-     * classes, make sure to fully document so other students can use the same interface.
-     */
 
-    /**
-     * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
-     * You should write your own methods to perform your own animation for your character/avatar.
-     */
-    //test comment 
     public void rideBike(){
         setLocation(0,0);
         Greenfoot.delay(10);
@@ -113,11 +93,6 @@ public class MeghaSuresh extends Student implements SpecialInterestOrHobby
         returnToSeat();
     }
 
-    /**
-     * myHobby is one of the interfaces provided.  
-     * An interface is just a contract for the methods that you will implement in your code.  The College Board no longer
-     * tests on abstract classes and interfaces, but it is good to know about them
-     */
     public void myHobby(String s) {
         System.out.println(s);
     }

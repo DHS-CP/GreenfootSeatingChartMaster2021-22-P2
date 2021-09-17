@@ -153,8 +153,8 @@ public class Classroom extends World
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
 
-        MeghaSuresh meghaSuresh = new MeghaSuresh();
-        addObject(meghaSuresh,6,10);
+        MeghaSuresh meghasuresh = new MeghaSuresh();
+        addObject(meghasuresh,6,10);
     }
     
     public List<Student> getAllStudents(){
@@ -183,15 +183,14 @@ public class Classroom extends World
             String placeStudent="addObject(" + studentInstanceVar + ","+ s.getX() + "," + s.getY()+"); \n";
             String assignSeat = studentInstanceVar + ".assignSeat();\n\n";
            
-            appendFile(newChartFile,instantiate);
+            appendFile(newChartFile,instantiate);  
             appendFile(newChartFile,placeStudent);  
             appendFile(newChartFile,assignSeat);
             
         }
-        Greenfoot.ask("Your file has been saved as: "+newChartFile+"     -Press [Enter] to continue.");
+        Greenfoot.ask("Your file has been saved as: " + newChartFile+"     -Press [Enter] to continue.");
     
-    }
-    
+    } 
  
     
     // modified from https://beginnersbook.com/2014/01/how-to-append-to-a-file-in-java/
