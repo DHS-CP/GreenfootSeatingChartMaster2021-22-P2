@@ -151,9 +151,9 @@ public class Classroom extends World
 
         
         createDeskLayout();
- // Each student needs to create their specific instance following the KilgoreTrout example.
- // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
- // and then clicking on the inspect text
+        // Each student needs to create their specific instance following the KilgoreTrout example.
+        // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
+        // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
@@ -170,15 +170,6 @@ public class Classroom extends World
     public List<Student> getAllStudents(){
        List<Student> s = getObjects(Student.class);  
        return s;
-    }
-    
-    public void act(){
-        String key = Greenfoot.getKey();
-        for (int i = 1; i < 9; i++){
-            if ((key != null) && key.equals(""+i)){
-                    printMembers(i);
-            }
-        }
     }
   
     /**
@@ -245,12 +236,20 @@ public class Classroom extends World
        }
     }
 }
+    public void act(){
+        String key = Greenfoot.getKey();
+        for (int i = 1; i < 9; i++){
+            if ((key != null) && key.equals(""+i)){
+                    printMembers(i);
+            }
+        }
+}
 /**
      * Prints out members of a table group to the terminal
-     * 
+     * <p>
      * The tableNum parameter is used to select the table group whose members 
      * you want printed out. Should be a number from 1 to 8
-     * 
+     * <p>
      * Method of Classroom
      * 
      * 
@@ -261,20 +260,20 @@ public class Classroom extends World
         
     public void printMembers(int tableNum){
         if (tableNum < 9 && tableNum > 0){
-        //Classroom world = (Classroom) getWorld();
-        ArrayList<StudentDesk> group = new ArrayList<StudentDesk>();
-        for (StudentDesk desk : getObjects(StudentDesk.class)){
-            if (desk.getDeskGroup() == tableNum){
-                group.add(desk);
+            //Classroom world = (Classroom) getWorld();
+            ArrayList<StudentDesk> group = new ArrayList<StudentDesk>();
+            for (StudentDesk desk : getObjects(StudentDesk.class)){
+                if (desk.getDeskGroup() == tableNum){
+                    group.add(desk);
+                }
             }
-        }
-        System.out.println("Members:");
-        for (StudentDesk desk : group){
-            Student student = desk.getStudent();
-            if (student != null){
-                student.getName();
+            System.out.println("Table group " + tableNum + "'s Members:");
+            for (StudentDesk desk : group){
+                Student student = desk.getStudent();
+                if (student != null){
+                    student.getName();
+                }
             }
-        }
         }
     }
 }
