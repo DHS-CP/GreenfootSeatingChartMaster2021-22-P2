@@ -172,6 +172,14 @@ public class Classroom extends World
        return s;
     }
     
+    public void act(){
+        String key = Greenfoot.getKey();
+        for (int i = 1; i < 9; i++){
+            if ((key != null) && key.equals(""+i)){
+                    printMembers(i);
+            }
+        }
+    }
   
     /**
      * gets a list of all students, and creates a new file that can be cut/pasted in as a prepare statement.
@@ -229,14 +237,44 @@ public class Classroom extends World
         //Closing BufferedWriter Stream
         bw.close();
 
-    System.out.println("Data successfully appended at the end of file");
+        System.out.println("Data successfully appended at the end of file");
 
       }catch(IOException ioe){
          System.out.println("Exception occurred:");
          ioe.printStackTrace();
        }
     }
-    
 }
-
+/**
+     * Prints out members of a table group to the terminal
+     * 
+     * The tableNum parameter is used to select the table group whose members 
+     * you want printed out. Should be a number from 1 to 8
+     * 
+     * Method of Classroom
+     * 
+     * 
+     * @author Siddharth Ajay, Brighton Alcantara, Pranav Guda, Yougi Jain
+     * @param tableNum the table number you want the members of (1-8)
+     * @return none
+     */    
+        
+    public void printMembers(int tableNum){
+        if (tableNum < 9 && tableNum > 0){
+        //Classroom world = (Classroom) getWorld();
+        ArrayList<StudentDesk> group = new ArrayList<StudentDesk>();
+        for (StudentDesk desk : getObjects(StudentDesk.class)){
+            if (desk.getDeskGroup() == tableNum){
+                group.add(desk);
+            }
+        }
+        System.out.println("Members:");
+        for (StudentDesk desk : group){
+            Student student = desk.getStudent();
+            if (student != null){
+                student.getName();
+            }
+        }
+        }
+    }
 }

@@ -40,7 +40,6 @@ public class SiddharthAjay extends Student implements SpecialInterestOrHobby
             
             StudentDesk desk = (StudentDesk) getOneIntersectingObject(StudentDesk.class);
             
-            desk.printMembers(desk.getDeskGroup());
         }
         
     }
