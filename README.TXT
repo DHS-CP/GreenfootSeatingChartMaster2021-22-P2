@@ -17,7 +17,7 @@ CONTRIBUTERS:               Kilgore Trout
 USER INSTRUCTIONS:
 
 
-1) Start git bash (assuming that you are using git bash) or terminal (MacOS). 
+1) Start git bash (assuming that you are using git bash). 
 NOTE: Each class build-master should fork the main repo to a new repo before starting. Names below should be updated accordingly
 
 2) Move to a directory where you want to keep your work. For instance, cd c:/ then cd Users/YourName/Documents/Assignments
@@ -34,7 +34,7 @@ NOTE: This should set up all initial conditions for GIT and avoid a lot of confu
 
 PLEASE DO NOT COMMIT YOUR FILES IF THEY DO NOT COMPILE LOCALLY!!!!! Work with your build master! I will provide the current
 version of the seating chart in Canvas, so that you know where you should be seated.
-=====================================================================
+
 How to add your code to github: 
 https://docs.google.com/document/d/1XKZFFq0f-uGaFPtmeeNShGGfIlkH2Vt8-S68Ag2YVyk/edit?usp=sharing
 
