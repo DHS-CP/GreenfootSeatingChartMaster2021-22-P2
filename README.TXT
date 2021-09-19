@@ -35,27 +35,8 @@ NOTE: This should set up all initial conditions for GIT and avoid a lot of confu
 PLEASE DO NOT COMMIT YOUR FILES IF THEY DO NOT COMPILE LOCALLY!!!!! Work with your build master! I will provide the current
 version of the seating chart in Canvas, so that you know where you should be seated.
 =====================================================================
-6) Create a new branch
- git checkout -b `branchname` 
- 
-7) (Start making your changes)
-
-8) Add all your files to staging
-git add .
-
-9) Check to see what has been staged (from the git command line):
-
-git status
-
-10) Commit your changes from the git command line:
-
-git commit -m “descriptive commit message”
-
-11) Push your changes to the remote repository (each period should have their own cloned or branched version to work with.
-Do not commit back to the master repo:
-
-git push origin `branchname`
-
+How to add your code to github: 
+https://docs.google.com/document/d/1XKZFFq0f-uGaFPtmeeNShGGfIlkH2Vt8-S68Ag2YVyk/edit?usp=sharing
 
 ASSIGNMENT INSTRUCTIONS IN BRIEF
 
