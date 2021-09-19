@@ -62,7 +62,7 @@ public class JaspalKhanuja extends Student implements SpecialInterestOrHobby
         if(Greenfoot.mouseClicked(this)){
           //  if (sitting){
                 sitting=false;
-                
+                corner();
                 standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-90.jpg";
                 setImage(standingFile);
                 Greenfoot.delay(10);
@@ -80,11 +80,10 @@ public class JaspalKhanuja extends Student implements SpecialInterestOrHobby
                 sayName(soundFile);
             
                 myHobby("I love to spend time with my dog!");
-            // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
-            // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
-            // Call the sitDown() method to move back  to your seat
+            // Method name is goinbetween();
+         
             
-                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+                goinbetween(); 
             standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-90.jpg";
                 setImage(standingFile);
                 Greenfoot.delay(10);
@@ -114,13 +113,99 @@ public class JaspalKhanuja extends Student implements SpecialInterestOrHobby
      * with some additional class and object that represents a blackboard, or a talking cartoon bubble etc. If you provide extra
      * classes, make sure to fully document so other students can use the same interface.
      */
+    // this moethod essentially moves the player around each corner and then allows them to do their actual method.
+    public void corner(){
 
-   
+ 
+
+        
+
+        setLocation(1,1);
+
+                Greenfoot.delay(20);
+
+                  setLocation(2,1);
+
+                Greenfoot.delay(20);
+
+                  setLocation(2,2);
+
+                Greenfoot.delay(20);
+
+                  setLocation(1,2);
+
+                Greenfoot.delay(20);
+
+// corner 1
+
+                setLocation(11,1);
+
+                Greenfoot.delay(20);
+
+                 setLocation(12,1);
+
+                Greenfoot.delay(20);
+
+                 setLocation(12,2);
+
+                 Greenfoot.delay(20);
+
+                 setLocation(11,2);
+
+//corner2
+
+                Greenfoot.delay(20);
+
+                setLocation(0,10);
+
+                
+
+                 Greenfoot.delay(20);
+
+                 setLocation(1,10);
+
+                
+
+                 Greenfoot.delay(20);
+
+                 setLocation(1,11);
+
+                
+
+                 Greenfoot.delay(20);
+
+                 setLocation(0,11);
+
+//corner3
+
+                
+
+                 Greenfoot.delay(20);
+
+                 setLocation(10,10);
+
+                  Greenfoot.delay(20);
+
+                  setLocation(11,10);
+
+                  Greenfoot.delay(20);
+
+                  setLocation(11,11);
+
+                  Greenfoot.delay(20);
+
+                  setLocation(10,11);
+
+                  Greenfoot.delay(20);
+
+      //corner4
+
+    }
     /**
      * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
+    public void goinbetween(){
         setLocation(7,6);
          Greenfoot.delay(10);
         // move right

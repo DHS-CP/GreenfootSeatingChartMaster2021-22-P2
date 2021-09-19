@@ -47,15 +47,13 @@ public class AnyaSengupta extends Student
         // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
           //  if (sitting){
-                setImage("anyasengupta-standing.jpg");// Print a blank line to create space between any student output.
+                setImage("anyasengupta-standing.jpg");
+                corner();// Print a blank line to create space between any student output.
                 getName();
                 sayName(soundFile);
                 //setRotation(0); // un-rotate actor
                 myHobby("I like to play basketball!");
-            // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
-            // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
-            // Call the sitDown() method to move back  to your seat
-            //circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+           // Method name is imagechange();
            imagechange();
             setRotation(0);
                 sitDown();
@@ -81,31 +79,93 @@ public class AnyaSengupta extends Student
      * This is a local method specific to the AnyaSengupta class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
-        // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
-        }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(7,7);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        /*for (int i=5;i>=0;i--){
-            setLocation(4,i);
-            Greenfoot.delay(10);
-        }   */
-           Greenfoot.delay(20);
-           returnToSeat();
+     // this moethod essentially moves the player around each corner and then allows them to do their actual method.
+  public void corner(){
+
+ 
+
+        
+
+        setLocation(1,1);
+
+                Greenfoot.delay(20);
+
+                  setLocation(2,1);
+
+                Greenfoot.delay(20);
+
+                  setLocation(2,2);
+
+                Greenfoot.delay(20);
+
+                  setLocation(1,2);
+
+                Greenfoot.delay(20);
+
+// corner 1
+
+                setLocation(11,1);
+
+                Greenfoot.delay(20);
+
+                 setLocation(12,1);
+
+                Greenfoot.delay(20);
+
+                 setLocation(12,2);
+
+                 Greenfoot.delay(20);
+
+                 setLocation(11,2);
+
+//corner2
+
+                Greenfoot.delay(20);
+
+                setLocation(0,10);
+
+                
+
+                 Greenfoot.delay(20);
+
+                 setLocation(1,10);
+
+                
+
+                 Greenfoot.delay(20);
+
+                 setLocation(1,11);
+
+                
+
+                 Greenfoot.delay(20);
+
+                 setLocation(0,11);
+
+//corner3
+
+                
+
+                 Greenfoot.delay(20);
+
+                 setLocation(10,10);
+
+                  Greenfoot.delay(20);
+
+                  setLocation(11,10);
+
+                  Greenfoot.delay(20);
+
+                  setLocation(11,11);
+
+                  Greenfoot.delay(20);
+
+                  setLocation(10,11);
+
+                  Greenfoot.delay(20);
+
+      //corner4
+
     }
     public void imagechange() {
         setLocation(1,2);

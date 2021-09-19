@@ -61,7 +61,9 @@ public class AnishkumarSenthil extends Student implements SpecialInterestOrHobby
         if(Greenfoot.mouseClicked(this)){
           //  if (sitting){
                 sitting=false;
+                
                 setImage(standingFile);
+                corner();
                 System.out.println(""); // Print a blank line to create space between any student output.
                 getName();
                 sayName(soundFile);
@@ -72,7 +74,7 @@ public class AnishkumarSenthil extends Student implements SpecialInterestOrHobby
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+                movetop();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
            
                 sitDown();
             }
@@ -97,7 +99,8 @@ public class AnishkumarSenthil extends Student implements SpecialInterestOrHobby
      * This is a local method specific to the AnishkumarSenthil class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
+     // this moethod essentially moves the player around each corner and then allows them to do their actual method.
+    public void movetop(){
         setLocation(0,0);
          Greenfoot.delay(10);
         // move right
