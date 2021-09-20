@@ -155,6 +155,10 @@ public class Classroom extends World
 
         MeghaSuresh meghasuresh = new MeghaSuresh();
         addObject(meghasuresh,6,10);
+        EileenXu eileenxu = new EileenXu();
+        addObject(eileenxu,5,10);
+        eileenxu.assignSeat();
+        
     }
     
     public List<Student> getAllStudents(){
