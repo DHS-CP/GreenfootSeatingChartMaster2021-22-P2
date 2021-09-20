@@ -70,7 +70,10 @@ public class ArchithKavalipati extends Student implements CSALearnedSoFar
                 setLocation(x-1,y);
                 x--;
             }
+<<<<<<< HEAD
             Greenfoot.delay(30);
+=======
+>>>>>>> 808ccecf53d185c7935f1b7a3444577f09549cbb
             if(mySeatY >y){
                 Greenfoot.delay(30);
                 setLocation(x,y+1);
