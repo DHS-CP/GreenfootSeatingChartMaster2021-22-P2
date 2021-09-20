@@ -61,6 +61,7 @@ public class ElizabethKoh extends Student implements SpecialInterestOrHobby
             sitting=false;
             System.out.println(""); // Print a blank line to create space between any student output.
             getName();
+            corner();
             sayName(soundFile);
             
             myHobby("I like to play piano and make things with my hands!");
@@ -97,6 +98,50 @@ public class ElizabethKoh extends Student implements SpecialInterestOrHobby
             Greenfoot.delay(10);
         }
         Greenfoot.delay(40);
+    }
+    void corner(){
+        setLocation(1,1);
+                Greenfoot.delay(20);
+                  setLocation(2,1);
+                Greenfoot.delay(20);
+                  setLocation(2,2);
+                Greenfoot.delay(20);
+                  setLocation(1,2);
+                Greenfoot.delay(20);
+                //corner 1
+         setLocation(11,1);
+                Greenfoot.delay(20);
+                 setLocation(12,1);
+                Greenfoot.delay(20);
+                 setLocation(12,2);
+                 Greenfoot.delay(20);
+                 setLocation(11,2);
+                 //corner 2
+        Greenfoot.delay(20);
+                setLocation(0,10);
+                
+                 Greenfoot.delay(20);
+                 setLocation(1,10);
+                
+                 Greenfoot.delay(20);
+                 setLocation(1,11);
+                
+                 Greenfoot.delay(20);
+                 setLocation(0,11);
+                 //corner3
+                
+                 Greenfoot.delay(20);
+                 setLocation(10,10);
+                  Greenfoot.delay(20);
+                  setLocation(11,10);
+                  Greenfoot.delay(20);
+                  setLocation(11,11);
+                  Greenfoot.delay(20);
+                  setLocation(10,11);
+                  Greenfoot.delay(20);
+                  //corner4
+
+
     }
    
     /**
