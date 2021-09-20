@@ -167,6 +167,10 @@ public class Classroom extends World
         AnishKasam anishkasam = new AnishKasam();
         addObject(anishkasam, 3, 6);
         anishkasam.assignSeat();
+        
+        NamitJoshi namitjoshi = new NamitJoshi();
+        addObject(namitjoshi, 2, 6);
+        namitjoshi.assignSeat();
     }
     
     public List<Student> getAllStudents(){
