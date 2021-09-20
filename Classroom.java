@@ -142,7 +142,7 @@ public class Classroom extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    
+
     private void prepare()
     {
         createDeskLayout();
@@ -152,6 +152,9 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
+
+        MeghaSuresh meghasuresh = new MeghaSuresh();
+        addObject(meghasuresh,6,10);
         EileenXu eileenxu = new EileenXu();
         addObject(eileenxu,5,10);
         eileenxu.assignSeat();
@@ -184,15 +187,14 @@ public class Classroom extends World
             String placeStudent="addObject(" + studentInstanceVar + ","+ s.getX() + "," + s.getY()+"); \n";
             String assignSeat = studentInstanceVar + ".assignSeat();\n\n";
            
-            appendFile(newChartFile,instantiate);
+            appendFile(newChartFile,instantiate);  
             appendFile(newChartFile,placeStudent);  
             appendFile(newChartFile,assignSeat);
             
         }
-        Greenfoot.ask("Your file has been saved as: "+newChartFile+"     -Press [Enter] to continue.");
+        Greenfoot.ask("Your file has been saved as: " + newChartFile+"     -Press [Enter] to continue.");
     
-    }
-    
+    } 
  
     
     // modified from https://beginnersbook.com/2014/01/how-to-append-to-a-file-in-java/
