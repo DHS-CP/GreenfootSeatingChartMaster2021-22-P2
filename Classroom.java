@@ -152,6 +152,14 @@ public class Classroom extends World
         VedantAgrawal vedantagrawal = new VedantAgrawal();
         addObject(vedantagrawal,2,3);
         vedantagrawal.assignSeat();
+
+        KilgoreTrout kilgoretrout = new KilgoreTrout();
+        addObject(kilgoretrout,2,3);
+        kilgoretrout.assignSeat();
+        
+        YashChhatre yashchhatre = new YashChhatre(); 
+        addObject(yashchhatre, 2,4); 
+        yashchhatre.assignSeat(); 
   
     }
     
@@ -196,32 +204,32 @@ public class Classroom extends World
     
 
    public  void appendFile(String fname, String s){
-   {	
+   {    
       try{
-    	 
+         
         //Specify the file name and path here
-    	File file =new File(fname);
+        File file =new File(fname);
 
-    	/* This logic is to create the file if the
-    	 * file is not already present
-    	 */
-    	if(!file.exists()){
-    	   file.createNewFile();
-    	}
+        /* This logic is to create the file if the
+         * file is not already present
+         */
+        if(!file.exists()){
+           file.createNewFile();
+        }
 
-    	//Here true is to append the content to file
-    	FileWriter fw = new FileWriter(file,true);
-    	//BufferedWriter writer give better performance
-    	BufferedWriter bw = new BufferedWriter(fw);
-    	bw.write(s);
-    	//Closing BufferedWriter Stream
-    	bw.close();
+        //Here true is to append the content to file
+        FileWriter fw = new FileWriter(file,true);
+        //BufferedWriter writer give better performance
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(s);
+        //Closing BufferedWriter Stream
+        bw.close();
 
-	System.out.println("Data successfully appended at the end of file");
+    System.out.println("Data successfully appended at the end of file");
 
       }catch(IOException ioe){
          System.out.println("Exception occurred:");
-    	 ioe.printStackTrace();
+         ioe.printStackTrace();
        }
    }
 }
