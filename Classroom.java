@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 //import java.util.List;
 //import java.util.Arrays;
  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
- 
+//e 
 /**
  * Write a description of class Classroom here.
  * 
@@ -21,6 +21,8 @@ import java.io.FileNotFoundException;
 public class Classroom extends World
 {
     private ArrayList<Object> listo = new ArrayList<Object>();
+    
+    private Red red = new Red();
     /**
      * Constructor for objects of class Classroom.
      * 
@@ -143,28 +145,46 @@ public class Classroom extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    
+
     private void prepare()
     {
+        addObject(red,6,6);
+
+        
         createDeskLayout();
- // Each student needs to create their specific instance following the KilgoreTrout example.
- // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
- // and then clicking on the inspect text
+        // Each student needs to create their specific instance following the KilgoreTrout example.
+        // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
+        // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
-        
+
         BrightonAlcantara brightonalcantara = new BrightonAlcantara();
         addObject(brightonalcantara, 6, 3);
         brightonalcantara.assignSeat();
-  
+
+        YougiJain yougijain = new YougiJain();
+        addObject(yougijain,6,4);
+        //yougijain.setLocation(5,9);
+        
+        SiddharthAjay siddharthajay = new SiddharthAjay();
+        addObject(siddharthajay,5,3);
+        siddharthajay.assignSeat();
+        
+        PranavGuda pranavguda = new PranavGuda();
+        addObject(pranavguda, 5,4);
+        pranavguda.assignSeat();
+    }
+    
+    public Red getRed(){
+        return red;
+ 
     }
     
     public List<Student> getAllStudents(){
        List<Student> s = getObjects(Student.class);  
        return s;
     }
-    
   
     /**
      * gets a list of all students, and creates a new file that can be cut/pasted in as a prepare statement.
@@ -221,13 +241,52 @@ public class Classroom extends World
         bw.write(s);
         //Closing BufferedWriter Stream
         bw.close();
-
-    System.out.println("Data successfully appended at the end of file");
+        System.out.println("Data successfully appended at the end of file");
 
       }catch(IOException ioe){
          System.out.println("Exception occurred:");
          ioe.printStackTrace();
        }
-   }
+    }
 }
+    public void act(){
+        String key = Greenfoot.getKey();
+        for (int i = 1; i < 9; i++){
+            if ((key != null) && key.equals(""+i)){
+                    printMembers(i);
+            }
+        }
+}
+/**
+     * Prints out members of a table group to the terminal
+     * <p>
+     * The tableNum parameter is used to select the table group whose members 
+     * you want printed out. Should be a number from 1 to 8
+     * <p>
+     * Method of Classroom
+     * 
+     * 
+     * @author Siddharth Ajay, Brighton Alcantara, Pranav Guda, Yougi Jain
+     * @param tableNum the table number you want the members of (1-8)
+     * @return none
+     */    
+        
+    public void printMembers(int tableNum){
+        if (tableNum < 9 && tableNum > 0){
+            //Classroom world = (Classroom) getWorld();
+            ArrayList<StudentDesk> group = new ArrayList<StudentDesk>();
+            for (StudentDesk desk : getObjects(StudentDesk.class)){
+                if (desk.getDeskGroup() == tableNum){
+                    group.add(desk);
+                }
+            }
+            System.out.println("Table group " + tableNum + "'s Members:");
+            for (StudentDesk desk : group){
+                Student student = desk.getStudent();
+                if (student != null){
+                    student.getName();
+                }
+            }
+        }
+    }
 }
