@@ -159,12 +159,16 @@ public class Classroom extends World
         kilgoretrout.assignSeat();
 
         YougiJain yougijain = new YougiJain();
-        addObject(yougijain,5,9);
+        addObject(yougijain,6,4);
         //yougijain.setLocation(5,9);
         
         SiddharthAjay siddharthajay = new SiddharthAjay();
         addObject(siddharthajay,5,3);
         siddharthajay.assignSeat();
+        
+        PranavGuda pranavguda = new PranavGuda();
+        addObject(pranavguda, 5,4);
+        pranavguda.assignSeat();
     }
     
     public Red getRed(){
