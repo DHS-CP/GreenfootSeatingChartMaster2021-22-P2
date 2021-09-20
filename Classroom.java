@@ -29,7 +29,7 @@ public class Classroom extends World
     {    
         // Create a new world with 10x6 cells with a cell size of 130x130 pixels.
         super(14, 14, 60); 
-
+        
         prepare();
     }
 
@@ -142,7 +142,7 @@ public class Classroom extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    
+
     private void prepare()
     {
         createDeskLayout();
@@ -152,9 +152,19 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
+
         ElizabethKoh elizabethkoh = new ElizabethKoh();
         addObject(elizabethkoh, 9, 6);
         elizabethkoh.assignSeat();
+
+        JaspalKhanuja jaspakhanuja = new JaspalKhanuja();
+        addObject(jaspakhanuja,8,6);
+        jaspakhanuja.assignSeat();
+        
+        AnyaSengupta anyaSengupta = new AnyaSengupta();
+        addObject(anyaSengupta,8,7);
+        AnishkumarSenthil anishkumarSenthil = new AnishkumarSenthil();
+        addObject(anishkumarSenthil,9,7);
     }
     
     public List<Student> getAllStudents(){
