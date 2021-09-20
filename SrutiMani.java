@@ -33,7 +33,9 @@ public class SrutiMani extends Student implements SpecialInterestOrHobby
     }
     public void act() 
     {
-        // Add your action code here.
+        if (Greenfoot.isKeyDown("m")){
+                shuffleTableMethod();
+        }
         if(Greenfoot.mouseClicked(this)){
           //  if (sitting){
                 sitting=false;
