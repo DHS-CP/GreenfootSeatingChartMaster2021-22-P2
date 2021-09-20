@@ -144,7 +144,7 @@ public class Classroom extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    
+
     private void prepare()
     {
         addObject(red,6,6);
@@ -157,6 +157,10 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
+
+        YougiJain yougijain = new YougiJain();
+        addObject(yougijain,5,9);
+        //yougijain.setLocation(5,9);
         
         SiddharthAjay siddharthajay = new SiddharthAjay();
         addObject(siddharthajay,5,3);
