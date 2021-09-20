@@ -34,8 +34,6 @@ public class Classroom extends World
 
         prepare();
     }
-    public void act(){
-    }
     /**
      * Prepare the classroom desk layout.  This method should not be chanaged!. Refactored from prepare method.
      */
