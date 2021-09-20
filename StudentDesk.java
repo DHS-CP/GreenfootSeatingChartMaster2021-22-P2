@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 /**
  * Write a description of class StudentDesk here.
@@ -13,6 +14,7 @@ public class StudentDesk extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int deskGroup;
+    Classroom classroom = new Classroom();
     public void act() 
     {
         // desks should not act.
@@ -27,13 +29,16 @@ public class StudentDesk extends Actor
         }
     public void getCurrentStudents(){
         int deskGroup = getDeskGroup();
-        String[] names = {"Shah Arin", "Advait Shewade", "Eileen Xu", "Megha Suresh", "Shashank Thapa", "Sirisha Velavan", "Pavan Sidhu", "Kevin Zhu", "Jaspal Khanuja", "Elizabeth Koh", "Anya Sengupta", "Anishkumar Senthil", "Anish Kataria", "Archith Kavalipati", "Srutilaya Mani", "Amish Saini", "Namit Joshi", "Anish Kasam", "Archit Kumar", "Natalie Lui", "Vedant Agrawal", "Joshua Aguilar", "Yash Chhatre", "Bibek Das", "Siddarth Ajay", "Brighton Alcantara", "Pranav Guda", "Yougi Jain", "Anirudh Annabathula", "Vidit Batta", "Ananya  Jakilati", "Rhea John"};
+        //String[] names = {"Shah Arin", "Advait Shewade", "Eileen Xu", "Megha Suresh", "Shashank Thapa", "Sirisha Velavan", "Pavan Sidhu", "Kevin Zhu", "Jaspal Khanuja", "Elizabeth Koh", "Anya Sengupta", "Anishkumar Senthil", "Anish Kataria", "Archith Kavalipati", "Srutilaya Mani", "Amish Saini", "Namit Joshi", "Anish Kasam", "Archit Kumar", "Natalie Lui", "Vedant Agrawal", "Joshua Aguilar", "Yash Chhatre", "Bibek Das", "Siddarth Ajay", "Brighton Alcantara", "Pranav Guda", "Yougi Jain", "Anirudh Annabathula", "Vidit Batta", "Ananya  Jakilati", "Rhea John"};
+        List<Student> s = classroom.getAllStudents();
         
         if (deskGroup == 1){
-            for (int i = 0; i < names.length && i < 4; i++){
-                System.out.println(names[i]);
+            for (Student student : s){
+                int x = student.getX();
+                int y = student.getY();
+                System.out.println(x,y);
             }    
-        }else if (deskGroup == 2){
+        }/*else if (deskGroup == 2){
             for (int i = 4; i < names.length && i < 8; i++){
                 System.out.println(names[i]);
             }    
@@ -61,6 +66,6 @@ public class StudentDesk extends Actor
             for (int i = 28; i < names.length && i < 32; i++){
                 System.out.println(names[i]);
             }
-        }  
+        }*/  
     }
 }

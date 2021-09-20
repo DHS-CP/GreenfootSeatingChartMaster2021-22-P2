@@ -57,7 +57,6 @@ public class EileenXu extends Student
         setImage(portraitFile);
         sitting=true;
     }
-    
     /**
      * Act - do whatever the EileenXu actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -83,9 +82,8 @@ public class EileenXu extends Student
                 setImage(portraitFile);;
         }
             
-    } 
-    
-     /**
+    }
+    /**
      * Prints the first and last name to the console
      */
     public void getName(){
@@ -97,8 +95,7 @@ public class EileenXu extends Student
      * with some additional class and object that represents a blackboard, or a talking cartoon bubble etc. If you provide extra
      * classes, make sure to fully document so other students can use the same interface.
      */
-   
-     /**
+    /**
      * This is a local method specific to the EileenXu class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
@@ -157,7 +154,6 @@ public class EileenXu extends Student
             setLocation(i,11);
             Greenfoot.delay(7);
         }
-        
         Greenfoot.delay(15);
         returnToSeat();
     }
@@ -169,5 +165,4 @@ public class EileenXu extends Student
      public void myHobby(String s) {
          System.out.println(s);
     }
-  
 }
