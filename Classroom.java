@@ -34,7 +34,8 @@ public class Classroom extends World
 
         prepare();
     }
-
+    public void act(){
+    }
     /**
      * Prepare the classroom desk layout.  This method should not be chanaged!. Refactored from prepare method.
      */
@@ -158,6 +159,10 @@ public class Classroom extends World
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
 
+        BrightonAlcantara brightonalcantara = new BrightonAlcantara();
+        addObject(brightonalcantara, 6, 3);
+        brightonalcantara.assignSeat();
+
         YougiJain yougijain = new YougiJain();
         addObject(yougijain,6,4);
         //yougijain.setLocation(5,9);
@@ -173,6 +178,7 @@ public class Classroom extends World
     
     public Red getRed(){
         return red;
+ 
     }
     
     public List<Student> getAllStudents(){
@@ -214,9 +220,9 @@ public class Classroom extends World
     // modified from https://beginnersbook.com/2014/01/how-to-append-to-a-file-in-java/
     
 
-    public  void appendFile(String fname, String s){
-    {    
-        try{
+   public  void appendFile(String fname, String s){
+   {    
+      try{
          
         //Specify the file name and path here
         File file =new File(fname);
@@ -235,7 +241,6 @@ public class Classroom extends World
         bw.write(s);
         //Closing BufferedWriter Stream
         bw.close();
-
         System.out.println("Data successfully appended at the end of file");
 
       }catch(IOException ioe){

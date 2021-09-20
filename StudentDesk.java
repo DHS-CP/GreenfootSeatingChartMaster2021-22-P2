@@ -21,7 +21,6 @@ public class StudentDesk extends Actor
            deskGroup=i;
         }
     public int getDeskGroup(){
-        
            return deskGroup;
         }
     public Student getStudent(){
