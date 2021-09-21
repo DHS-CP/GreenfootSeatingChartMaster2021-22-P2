@@ -153,8 +153,17 @@ public class Classroom extends World
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
         
+
         AmishSaini amishsaini = new AmishSaini();
         addObject(amishsaini,6,7);
+
+        SrutiMani srutimani = new SrutiMani();
+        addObject(srutimani, 5,7);
+        srutimani.assignSeat();
+
+        AnishKataria anishkataria = new AnishKataria();
+        addObject(anishkataria, 5,6);
+        anishkataria.assignSeat();
   
     }
     
@@ -227,5 +236,6 @@ public class Classroom extends World
          ioe.printStackTrace();
        }
    }
+   
 }
 }
