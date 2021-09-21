@@ -156,6 +156,10 @@ public class Classroom extends World
         ViditBatta viditbatta = new ViditBatta();
         addObject(viditbatta,9,3);
         viditbatta.assignSeat();
+        AnirudhAnnabathula anirudhannabathula = new AnirudhAnnabathula(); 
+        addObject(anirudhannabathula,8,3); 
+        anirudhannabathula.assignSeat(); 
+  
     }
     
     public List<Student> getAllStudents(){
