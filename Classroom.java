@@ -154,6 +154,9 @@ public class Classroom extends World
         kilgoretrout.assignSeat();
         
 
+        AmishSaini amishsaini = new AmishSaini();
+        addObject(amishsaini,6,7);
+
         SrutiMani srutimani = new SrutiMani();
         addObject(srutimani, 5,7);
         srutimani.assignSeat();
