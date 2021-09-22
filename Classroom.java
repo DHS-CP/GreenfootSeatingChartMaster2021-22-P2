@@ -39,6 +39,13 @@ public class Classroom extends World
 
     public void act()
     {
+        String key = Greenfoot.getKey();
+        for (int i = 1; i < 9; i++){
+            if ((key != null) && key.equals(""+i)){
+                    printMembers(i);
+            }
+        }
+        
         if (Greenfoot.isKeyDown("f"))
         {
             labelStudentCreation();
@@ -318,15 +325,7 @@ public class Classroom extends World
        }
     }
 }
-    public void act(){
-        String key = Greenfoot.getKey();
-        for (int i = 1; i < 9; i++){
-            if ((key != null) && key.equals(""+i)){
-                    printMembers(i);
-            }
-        }
-}
-
+    
 /**
      * Prints out members of a table group to the terminal
      * <p>
