@@ -20,12 +20,14 @@ public class StudentDesk extends Actor
     private int deskGroup;
     public void act() 
     {
-        if (Greenfoot.isKeyDown("5")) {
+        if(Greenfoot.isKeyDown("m")){
+        groupmethod();
+        }
+         if (Greenfoot.isKeyDown("5")) {
             groupMethod(5); 
         }
-        // desks should not act.
-    } 
-    
+    }
+       
     public void setDeskGroup(int i){
         if (i>0 && i<9)
            deskGroup=i;
@@ -54,6 +56,13 @@ public class StudentDesk extends Actor
             
             stringList.add(firstName + lastName);
         }
+
+    public void groupmethod(){
+        GreenfootImage question = (new GreenfootImage("Question.jpg"));
+        question.scale( 60, 60);
+        this.setImage(question);
+        Greenfoot.delay(10);
+    }
         
     public int getDeskGroup() {
         Random rand = new Random();
