@@ -48,7 +48,9 @@ public AmishSaini(String f, String l, int r, int s) {
             
                 setImage(standingFile);
                 Greenfoot.delay(225);
+                
                 sitDown();
+                shuffleTableMethod();
             }
         
     } 
@@ -92,7 +94,31 @@ public AmishSaini(String f, String l, int r, int s) {
             
         }
     }
-   
+    /*
+     * @author Anish K, Sruti M, Amish S, Archith K
+     * @param none
+     * @return none
+     */
+    public void shuffleTableMethod(){
+       
+            for (int i=1;i<=5;i++){
+                
+                setLocation(getX() + 1,getY() + 1);
+                Greenfoot.delay(20);
+                
+            }
+            for (int i=10; i>=1; i--){
+            Greenfoot.delay(20);
+                    
+            setLocation(getX() -1,getY() -1);
+            }
+            for (int i=1;i<=5;i++){
+                
+                setLocation(getX() + 1,getY() + 1);
+                Greenfoot.delay(20);
+                
+            }
+    }
      public void myHobby(String s) {
          System.out.println(s);
 }

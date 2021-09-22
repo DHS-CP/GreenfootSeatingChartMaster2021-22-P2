@@ -33,9 +33,7 @@ public class ArchithKavalipati extends Student implements CSALearnedSoFar
     public void act() 
     {
         // Add your action code here.
-        if(Greenfoot.isKeyDown("m")){
-            shuffleTableMethod();
-        }
+        
         
         if(Greenfoot.mouseClicked(this)){
           //  if (sitting){
@@ -46,9 +44,35 @@ public class ArchithKavalipati extends Student implements CSALearnedSoFar
                 LearnedSoFar();
                 returnHome(mySeatX,mySeatY);
                 sitDown();
+                shuffleTableMethod();
         }
     }
     public void LearnedSoFar(){
+    }
+    /*
+     * @author Anish K, Sruti M, Amish S, Archith K
+     * @param none
+     * @return none
+     */
+    public void shuffleTableMethod(){
+       
+            for (int i=1;i<=5;i++){
+                
+                setLocation(getX() + 1,getY() + 1);
+                Greenfoot.delay(20);
+                
+            }
+            for (int i=10; i>=1; i--){
+            Greenfoot.delay(20);
+                    
+            setLocation(getX() -1,getY() -1);
+            }
+            for (int i=1;i<=5;i++){
+                
+                setLocation(getX() + 1,getY() + 1);
+                Greenfoot.delay(20);
+                
+            }
     }
     public void returnHome(int mySeatX,int mySeatY)
     /**

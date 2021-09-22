@@ -57,12 +57,7 @@ public class AnishKataria extends Student implements SpecialInterestOrHobby
     public void act() 
     {
         // Add your action code here.
-        if (Greenfoot.isKeyDown("m")) {
-    
-                    shuffleTableMethod();
-                    
-                    
-                }
+        
         if(Greenfoot.mouseClicked(this)){
           //  if (sitting){
                 sitting=false;
@@ -78,6 +73,7 @@ public class AnishKataria extends Student implements SpecialInterestOrHobby
 
                 changeSize();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
                 returnSize();
+                shuffleTableMethod();
                 sitDown();
                 
                 
@@ -124,6 +120,31 @@ public class AnishKataria extends Student implements SpecialInterestOrHobby
            Greenfoot.delay(10);
            Greenfoot.delay(20);
            returnToSeat();
+    }
+    /*
+     * @author Anish K, Sruti M, Amish S, Archith K
+     * @param none
+     * @return none
+     */
+    public void shuffleTableMethod(){
+       
+            for (int i=1;i<=5;i++){
+                
+                setLocation(getX() + 1,getY() + 1);
+                Greenfoot.delay(20);
+                
+            }
+            for (int i=10; i>=1; i--){
+            Greenfoot.delay(20);
+                    
+            setLocation(getX() -1,getY() -1);
+            }
+            for (int i=1;i<=5;i++){
+                
+                setLocation(getX() + 1,getY() + 1);
+                Greenfoot.delay(20);
+                
+            }
     }
      /**
      * myHobby is one of the interfaces provided.  
