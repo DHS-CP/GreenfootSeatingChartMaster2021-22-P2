@@ -31,7 +31,7 @@ public class Classroom extends World
     {    
         // Create a new world with 10x6 cells with a cell size of 130x130 pixels.
         super(14, 14, 60); 
-
+        
         prepare();
     }
     /**
@@ -150,6 +150,7 @@ public class Classroom extends World
 
         
         createDeskLayout();
+
         // Each student needs to create their specific instance following the KilgoreTrout example.
         // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
         // and then clicking on the inspect text
@@ -172,11 +173,44 @@ public class Classroom extends World
         PranavGuda pranavguda = new PranavGuda();
         addObject(pranavguda, 5,4);
         pranavguda.assignSeat();
+    
+        ElizabethKoh elizabethkoh = new ElizabethKoh();
+        addObject(elizabethkoh, 9, 6);
+        elizabethkoh.assignSeat();
+
+        JaspalKhanuja jaspakhanuja = new JaspalKhanuja();
+        addObject(jaspakhanuja,8,6);
+        jaspakhanuja.assignSeat();
+        
+        AnyaSengupta anyaSengupta = new AnyaSengupta();
+        addObject(anyaSengupta,8,7);
+        anyaSengupta.assignSeat(); 
+        
+        AnishkumarSenthil anishkumarSenthil = new AnishkumarSenthil();
+        addObject(anishkumarSenthil,9,7);
+        anishkumarSenthil.assignSeat(); 
+     
+        ArchitKumar architKumar = new ArchitKumar();
+        addObject(architKumar,11,7);
+        architKumar.setLocation(3,7);
+        architKumar.setLocation(2,7);
+        
+        NatalieLui natalielui = new NatalieLui();
+        addObject(natalielui,3,7);
+        natalielui.assignSeat();
+        
+        AnishKasam anishkasam = new AnishKasam();
+        addObject(anishkasam, 3, 6);
+        anishkasam.assignSeat();
+        
+        NamitJoshi namitjoshi = new NamitJoshi();
+        addObject(namitjoshi, 2, 6);
+        namitjoshi.assignSeat();
+
     }
     
-    public Red getRed(){
-        return red;
- 
+    public Red getRed() {
+      return red;
     }
     
     public List<Student> getAllStudents(){
@@ -240,6 +274,16 @@ public class Classroom extends World
         //Closing BufferedWriter Stream
         bw.close();
         System.out.println("Data successfully appended at the end of file");
+
+        //Here true is to append the content to file
+        FileWriter fw = new FileWriter(file,true);
+        //BufferedWriter writer give better performance
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(s);
+        //Closing BufferedWriter Stream
+        bw.close();
+
+    System.out.println("Data successfully appended at the end of file");
 
       }catch(IOException ioe){
          System.out.println("Exception occurred:");
