@@ -179,9 +179,27 @@ public class Classroom extends World
 
         
         createDeskLayout();
-        // Each student needs to create their specific instance following the KilgoreTrout example.
-        // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
-        // and then clicking on the inspect text
+
+ // Each student needs to create their specific instance following the KilgoreTrout example.
+ // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
+ // and then clicking on the inspect text
+        
+
+
+        AmishSaini amishsaini = new AmishSaini();
+        addObject(amishsaini,6,7);
+
+        SrutiMani srutimani = new SrutiMani();
+        addObject(srutimani, 5,7);
+        srutimani.assignSeat();
+
+        AnishKataria anishkataria = new AnishKataria();
+        addObject(anishkataria, 5,6);
+        anishkataria.assignSeat();
+
+        ArchithKavalipati archithkavalipati = new ArchithKavalipati();
+        addObject(archithkavalipati,6,6);
+        archithkavalipati.assignSeat();
 
         BibekDas bibekDas = new BibekDas();
         addObject(bibekDas,3,4);
@@ -315,6 +333,7 @@ public class Classroom extends World
         bw.write(s);
         //Closing BufferedWriter Stream
         bw.close();
+
         System.out.println("Data successfully appended at the end of file");
 
     System.out.println("Data successfully appended at the end of file");

@@ -69,5 +69,7 @@ public abstract class Student extends Actor
         mySeatX=getX();
         mySeatY=getY();
     }
+    
+    
  
 }
