@@ -21,6 +21,7 @@ import java.io.FileNotFoundException;
 public class Classroom extends World
 {
     private ArrayList<Object> listo = new ArrayList<Object>();
+    public static List<Student> studentList;
     /**
      * Constructor for objects of class Classroom.
      * 
@@ -31,8 +32,28 @@ public class Classroom extends World
         super(14, 14, 60); 
 
         prepare();
+        
+        System.out.println("Press the Key F to find a person in the interactive seating chart!");
     }
-
+    public void act()
+    {
+        if (Greenfoot.isKeyDown("f"))
+        {
+            labelStudentCreation();
+        }
+    }
+    public void labelStudentCreation()
+        { 
+            studentList = getObjects(Student.class); 
+            Student foundStudent = StudentDeskGroup.findStudent();
+            JoshuaAguilar studentLabel = new JoshuaAguilar();
+            studentLabel.setImage("studentLabel.png");
+            studentLabel.getImage().scale(60,60);
+            addObject(studentLabel,foundStudent.getX(),foundStudent.getY());
+            Greenfoot.playSound("scribble.wav");
+            Greenfoot.delay(100);
+            removeObject(studentLabel);
+        }
     /**
      * Prepare the classroom desk layout.  This method should not be chanaged!. Refactored from prepare method.
      */
@@ -149,12 +170,7 @@ public class Classroom extends World
         // Each student needs to create their specific instance following the KilgoreTrout example.
         // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
         // and then clicking on the inspect text
-        KilgoreTrout kilgoretrout = new KilgoreTrout();
-        addObject(kilgoretrout,2,3);
-        kilgoretrout.assignSeat();
 
-        
-        
         BibekDas bibekDas = new BibekDas();
         addObject(bibekDas,12,5);
         bibekDas.setLocation(3,4);
@@ -162,15 +178,15 @@ public class Classroom extends World
         VedantAgrawal vedantagrawal = new VedantAgrawal();
         addObject(vedantagrawal,2,3);
         vedantagrawal.assignSeat();
-
-        KilgoreTrout kilgoretrout = new KilgoreTrout();
-        addObject(kilgoretrout,2,3);
-        kilgoretrout.assignSeat();
         
         YashChhatre yashchhatre = new YashChhatre(); 
         addObject(yashchhatre, 2,4); 
         yashchhatre.assignSeat(); 
-  
+        
+        JoshuaAguilar joshuaaguilar = new JoshuaAguilar();
+        addObject(joshuaaguilar,3,3);
+        joshuaaguilar.assignSeat();
+        
     }
     
     public List<Student> getAllStudents(){
