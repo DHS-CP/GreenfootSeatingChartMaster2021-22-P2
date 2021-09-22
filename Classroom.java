@@ -275,14 +275,6 @@ public class Classroom extends World
         bw.close();
         System.out.println("Data successfully appended at the end of file");
 
-        //Here true is to append the content to file
-        FileWriter fw = new FileWriter(file,true);
-        //BufferedWriter writer give better performance
-        BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(s);
-        //Closing BufferedWriter Stream
-        bw.close();
-
     System.out.println("Data successfully appended at the end of file");
 
       }catch(IOException ioe){

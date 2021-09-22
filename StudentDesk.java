@@ -36,7 +36,6 @@ public class StudentDesk extends Actor
     public Student getStudent(){
         Student student = (Student) getOneIntersectingObject(Student.class);
         return student;
-        return deskGroup;
     }
     
     public void groupMethod(int tablenum) {
