@@ -152,7 +152,7 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
-        
+
 
         AmishSaini amishsaini = new AmishSaini();
         addObject(amishsaini,6,7);
@@ -164,6 +164,11 @@ public class Classroom extends World
         AnishKataria anishkataria = new AnishKataria();
         addObject(anishkataria, 5,6);
         anishkataria.assignSeat();
+
+        ArchithKavalipati archithkavalipati = new ArchithKavalipati();
+        addObject(archithkavalipati,6,6);
+        archithkavalipati.assignSeat();
+
   
     }
     
