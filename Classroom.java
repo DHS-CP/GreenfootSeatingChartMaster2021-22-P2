@@ -178,10 +178,14 @@ public class Classroom extends World
 
         
         createDeskLayout();
-        // Each student needs to create their specific instance following the KilgoreTrout example.
-        // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
-        // and then clicking on the inspect text
+ // Each student needs to create their specific instance following the KilgoreTrout example.
+ // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
+ // and then clicking on the inspect text
 
+        RheaJohn rheajohn = new RheaJohn();
+        addObject(rheajohn,9,4);
+        rheajohn.assignSeat();
+        
         AnanyaJakilati ananyajakilati = new AnanyaJakilati();
         addObject(ananyajakilati,8,4);
         ananyajakilati.assignSeat();
@@ -305,7 +309,6 @@ public class Classroom extends World
         NamitJoshi namitjoshi = new NamitJoshi();
         addObject(namitjoshi, 2, 6);
         namitjoshi.assignSeat();
-
     }
     
     public Red getRed() {
