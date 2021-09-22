@@ -55,7 +55,7 @@ public class StudentDesk extends Actor
             stringList.add(firstName + lastName);
         }
         
-    public int getDeskGroup() {
+  
         Random rand = new Random();
         String randomName = stringList.get(rand.nextInt(stringList.size()));
         
@@ -77,6 +77,7 @@ public class StudentDesk extends Actor
             Greenfoot.delay(10);
             getWorld().setBackground("csa.jpg");
         }
+    }
     public void getCurrentStudents(){
         int deskGroup = getDeskGroup();
         String[] names = {"Shah Arin", "Advait Shewade", "Eileen Xu", "Megha Suresh", "Shashank Thapa", "Sirisha Velavan", "Pavan Sidhu", "Kevin Zhu", "Jaspal Khanuja", "Elizabeth Koh", "Anya Sengupta", "Anishkumar Senthil", "Anish Kataria", "Archith Kavalipati", "Srutilaya Mani", "Amish Saini", "Namit Joshi", "Anish Kasam", "Archit Kumar", "Natalie Lui", "Vedant Agrawal", "Joshua Aguilar", "Yash Chhatre", "Bibek Das", "Siddarth Ajay", "Brighton Alcantara", "Pranav Guda", "Yougi Jain", "Anirudh Annabathula", "Vidit Batta", "Ananya  Jakilati", "Rhea John"};
