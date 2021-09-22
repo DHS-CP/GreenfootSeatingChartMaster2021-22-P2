@@ -169,11 +169,6 @@ public class Classroom extends World
         AnishkumarSenthil anishkumarSenthil = new AnishkumarSenthil();
         addObject(anishkumarSenthil,9,7);
         anishkumarSenthil.assignSeat(); 
-        
-
-        KilgoreTrout kilgoretrout = new KilgoreTrout();
-        addObject(kilgoretrout,2,3);
-        kilgoretrout.assignSeat();
      
         ArchitKumar architKumar = new ArchitKumar();
         addObject(architKumar,11,7);
