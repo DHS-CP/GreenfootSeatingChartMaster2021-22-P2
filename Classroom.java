@@ -163,7 +163,7 @@ public class Classroom extends World
 
         YougiJain yougijain = new YougiJain();
         addObject(yougijain,6,4);
-        //yougijain.setLocation(5,9);
+        yougijain.assignSeat(); 
         
         SiddharthAjay siddharthajay = new SiddharthAjay();
         addObject(siddharthajay,5,3);
