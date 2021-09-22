@@ -15,13 +15,21 @@ public class StudentDesk extends Actor
     private int deskGroup;
     public void act() 
     {
-        // desks should not act.
-    } 
+        if(Greenfoot.isKeyDown("m")){
+        groupmethod();
+        }
+    }
     public void setDeskGroup(int i){
         if (i>0 && i<9)
            deskGroup=i;
         }
-     public int getDeskGroup(){
+    public void groupmethod(){
+        GreenfootImage question = (new GreenfootImage("Question.jpg"));
+        question.scale( 60, 60);
+        this.setImage(question);
+        Greenfoot.delay(10);
+        }
+    public int getDeskGroup(){
         
            return deskGroup;
         }
