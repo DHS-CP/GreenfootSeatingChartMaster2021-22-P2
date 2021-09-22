@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
 
  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
- * Write a description of class Classroom here.
+ /* Write a description of class Classroom here.
  * 
  * @author Mr. Kaehms 
  * @version 2.0  Note: updated for new desk layout. Goal is to make setting seats easy
@@ -178,13 +178,25 @@ public class Classroom extends World
 
         
         createDeskLayout();
-        // Each student needs to create their specific instance following the KilgoreTrout example.
-        // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
-        // and then clicking on the inspect text
+ // Each student needs to create their specific instance following the KilgoreTrout example.
+ // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
+ // and then clicking on the inspect text
 
+        RheaJohn rheajohn = new RheaJohn();
+        addObject(rheajohn,9,4);
+        rheajohn.assignSeat();
+        
         AnanyaJakilati ananyajakilati = new AnanyaJakilati();
         addObject(ananyajakilati,8,4);
         ananyajakilati.assignSeat();
+        
+        AnirudhAnnabathula anirudhannabathula = new AnirudhAnnabathula(); 
+        addObject(anirudhannabathula,8,3); 
+        anirudhannabathula.assignSeat(); 
+        
+        ViditBatta viditbatta = new ViditBatta();
+        addObject(viditbatta,9,3);
+        viditbatta.assignSeat();
         
         PavanSidhu pavansidhu = new PavanSidhu();
         addObject(pavansidhu, 8,10);
@@ -297,7 +309,6 @@ public class Classroom extends World
         NamitJoshi namitjoshi = new NamitJoshi();
         addObject(namitjoshi, 2, 6);
         namitjoshi.assignSeat();
-
     }
     
     public Red getRed() {

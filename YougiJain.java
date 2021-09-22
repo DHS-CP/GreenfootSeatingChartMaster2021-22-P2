@@ -74,6 +74,7 @@ public class YougiJain extends Student implements SpecialInterestOrHobby
             Greenfoot.delay(10);
         }
         i=0;
+        
     }
     public int getRandomNumber(int start,int end)
     {
