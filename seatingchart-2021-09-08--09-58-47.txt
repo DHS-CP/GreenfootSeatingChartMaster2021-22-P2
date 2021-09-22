@@ -1,0 +1,4 @@
+KilgoreTrout kilgoretrout = new KilgoreTrout(); 
+addObject(kilgoretrout,5,3); 
+kilgoretrout.assignSeat();
+

@@ -43,6 +43,15 @@ function loadScripts(doc, tag) {
                     var zip = new JSZip(data);
                     zip.load(data);
                     moduleSearchIndex = JSON.parse(zip.file("module-search-index.json").asText());
+
+    $.get(pathtoroot + "module-search-index.zip")
+            .done(function() {
+                JSZipUtils.getBinaryContent(pathtoroot + "module-search-index.zip", function(e, data) {
+                    JSZip.loadAsync(data).then(function(zip){
+                        zip.file("module-search-index.json").async("text").then(function(content){
+                            moduleSearchIndex = JSON.parse(content);
+                        });
+                    });
                 });
             });
     $.get(pathtoroot + "package-search-index.zip")
@@ -51,6 +60,11 @@ function loadScripts(doc, tag) {
                     var zip = new JSZip(data);
                     zip.load(data);
                     packageSearchIndex = JSON.parse(zip.file("package-search-index.json").asText());
+                    JSZip.loadAsync(data).then(function(zip){
+                        zip.file("package-search-index.json").async("text").then(function(content){
+                            packageSearchIndex = JSON.parse(content);
+                        });
+                    });
                 });
             });
     $.get(pathtoroot + "type-search-index.zip")
@@ -59,6 +73,11 @@ function loadScripts(doc, tag) {
                     var zip = new JSZip(data);
                     zip.load(data);
                     typeSearchIndex = JSON.parse(zip.file("type-search-index.json").asText());
+                    JSZip.loadAsync(data).then(function(zip){
+                        zip.file("type-search-index.json").async("text").then(function(content){
+                            typeSearchIndex = JSON.parse(content);
+                        });
+                    });
                 });
             });
     $.get(pathtoroot + "member-search-index.zip")
@@ -67,6 +86,11 @@ function loadScripts(doc, tag) {
                     var zip = new JSZip(data);
                     zip.load(data);
                     memberSearchIndex = JSON.parse(zip.file("member-search-index.json").asText());
+                    JSZip.loadAsync(data).then(function(zip){
+                        zip.file("member-search-index.json").async("text").then(function(content){
+                            memberSearchIndex = JSON.parse(content);
+                        });
+                    });
                 });
             });
     $.get(pathtoroot + "tag-search-index.zip")
@@ -75,6 +99,11 @@ function loadScripts(doc, tag) {
                     var zip = new JSZip(data);
                     zip.load(data);
                     tagSearchIndex = JSON.parse(zip.file("tag-search-index.json").asText());
+                    JSZip.loadAsync(data).then(function(zip){
+                        zip.file("tag-search-index.json").async("text").then(function(content){
+                            tagSearchIndex = JSON.parse(content);
+                        });
+                    });
                 });
             });
     if (!moduleSearchIndex) {
