@@ -40,7 +40,7 @@ public class AdvaitShewade extends Student
        //imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
-       //setImage();
+       setImage(portraitFile);
         sitting=true;
     }
     public void act() 
