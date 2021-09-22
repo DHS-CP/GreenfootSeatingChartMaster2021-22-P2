@@ -158,6 +158,19 @@ public class Classroom extends World
         BibekDas bibekDas = new BibekDas();
         addObject(bibekDas,12,5);
         bibekDas.setLocation(3,4);
+
+        VedantAgrawal vedantagrawal = new VedantAgrawal();
+        addObject(vedantagrawal,2,3);
+        vedantagrawal.assignSeat();
+
+        KilgoreTrout kilgoretrout = new KilgoreTrout();
+        addObject(kilgoretrout,2,3);
+        kilgoretrout.assignSeat();
+        
+        YashChhatre yashchhatre = new YashChhatre(); 
+        addObject(yashchhatre, 2,4); 
+        yashchhatre.assignSeat(); 
+  
     }
     
     public List<Student> getAllStudents(){
