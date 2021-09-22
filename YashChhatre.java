@@ -35,9 +35,9 @@ public class YashChhatre extends Student implements SpecialInterestOrHobby
        mySeatY=1;
        //soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpeg";
-       GreenfootImage img = getImage();
-       img.scale(60,60); 
-       setImage(img); 
+
+       setImage(portraitFile);
+       getImage().scale(60,60); 
        sitting=true;
     }
     

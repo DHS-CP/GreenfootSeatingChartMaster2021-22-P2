@@ -172,8 +172,8 @@ public class Classroom extends World
         // and then clicking on the inspect text
 
         BibekDas bibekDas = new BibekDas();
-        addObject(bibekDas,12,5);
-        bibekDas.setLocation(3,4);
+        addObject(bibekDas,3,4);
+        bibekDas.assignSeat();
 
         VedantAgrawal vedantagrawal = new VedantAgrawal();
         addObject(vedantagrawal,2,3);
