@@ -22,7 +22,7 @@ public class Classroom extends World
 {
     private ArrayList<Object> listo = new ArrayList<Object>();
     
-    private Red red = new Red();
+    private Red red = new Red(); 
     /**
      * Constructor for objects of class Classroom.
      * 
