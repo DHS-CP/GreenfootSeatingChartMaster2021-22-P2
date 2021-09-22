@@ -8,22 +8,28 @@ import java.util.ArrayList;
  */
 public abstract class Student extends Actor
 {
-   //Instance variables
-   public String firstName;
-   public String lastName;
-   public int mySeatX;         // rows start in the front of class (1), and end in the back of class
-   public int mySeatY;        // seats are left to right, 1-8
-   public boolean isActive;  // can you think of an algorithm that would allow you to use this
+    //Instance variables
+    public String firstName;
+    public String lastName;
+    public int mySeatX;         // rows start in the front of class (1), and end in the back of class
+    public int mySeatY;        // seats are left to right, 1-8
+    public boolean isActive;  // can you think of an algorithm that would allow you to use this
                              // variable to use keyboard entry for all the instance of a student
                              // that we will create?
-   public boolean sitting;   // Is the student sitting or standing (default sitting)                         
+    public boolean sitting;   // Is the student sitting or standing (default sitting)                         
    
- //  public String imgFile;   // These will be created in subclass as firstName.toLowerCase()+
-   public String portraitFile; // image used when sitting
-   public String standingFile; // image used when standing
-   public String soundFile; //      firstName.toLowerCase()+lastName.toLowerCase()+".ext"; (.wav or .jpg)
-   Classroom clas = (Classroom) getWorld();
-   public void setSeatX(int r){
+    //  public String imgFile;   // These will be created in subclass as firstName.toLowerCase()+
+    public String portraitFile; // image used when sitting
+    public String standingFile; // image used when standing
+    public String rightFile;
+    public String leftFile;
+    public String upFile;
+    public String downFile;
+    public String upsidedownFile;
+    public String pandaFile;
+    public String soundFile; //      firstName.toLowerCase()+lastName.toLowerCase()+".ext"; (.wav or .jpg)
+    Classroom clas = (Classroom) getWorld();
+    public void setSeatX(int r){
        mySeatX=r;
     }
     
@@ -49,7 +55,7 @@ public abstract class Student extends Actor
     public String getFirstName(){
         return firstName;
     }
-     public String getLastName(){
+    public String getLastName(){
         return lastName;
     }
     
