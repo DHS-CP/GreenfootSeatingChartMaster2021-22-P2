@@ -163,8 +163,11 @@ public class Classroom extends World
         
         AnyaSengupta anyaSengupta = new AnyaSengupta();
         addObject(anyaSengupta,8,7);
+        anyaSengupta.assignSeat(); 
+        
         AnishkumarSenthil anishkumarSenthil = new AnishkumarSenthil();
         addObject(anishkumarSenthil,9,7);
+        anishkumarSenthil.assignSeat(); 
     }
     
     public List<Student> getAllStudents(){
