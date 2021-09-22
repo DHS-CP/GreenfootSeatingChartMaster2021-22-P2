@@ -179,12 +179,29 @@ public class Classroom extends World
 
         
         createDeskLayout();
+        // Each student needs to create their specific instance following the KilgoreTrout example.
+        // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
+        // and then clicking on the inspect text
+        KilgoreTrout kilgoretrout = new KilgoreTrout();
+        addObject(kilgoretrout,2,3);
+        kilgoretrout.assignSeat();
 
- // Each student needs to create their specific instance following the KilgoreTrout example.
- // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
- // and then clicking on the inspect text
+
+        AdvaitShewade advaitshewade = new AdvaitShewade();
+        addObject(advaitshewade,6,9);
+        advaitshewade.assignSeat();
+
         
+        ArinShah arinshah = new ArinShah();
+        addObject(arinshah,5,9);
+        arinshah.assignSeat();
 
+        MeghaSuresh meghasuresh = new MeghaSuresh();
+        addObject(meghasuresh,6,10);
+        
+        EileenXu eileenxu = new EileenXu();
+        addObject(eileenxu,5,10);
+        eileenxu.assignSeat();
 
         AmishSaini amishsaini = new AmishSaini();
         addObject(amishsaini,6,7);
@@ -298,15 +315,14 @@ public class Classroom extends World
             String placeStudent="addObject(" + studentInstanceVar + ","+ s.getX() + "," + s.getY()+"); \n";
             String assignSeat = studentInstanceVar + ".assignSeat();\n\n";
            
-            appendFile(newChartFile,instantiate);
+            appendFile(newChartFile,instantiate);  
             appendFile(newChartFile,placeStudent);  
             appendFile(newChartFile,assignSeat);
             
         }
-        Greenfoot.ask("Your file has been saved as: "+newChartFile+"     -Press [Enter] to continue.");
+        Greenfoot.ask("Your file has been saved as: " + newChartFile+"     -Press [Enter] to continue.");
     
-    }
-    
+    } 
  
     
     // modified from https://beginnersbook.com/2014/01/how-to-append-to-a-file-in-java/
@@ -333,10 +349,8 @@ public class Classroom extends World
         bw.write(s);
         //Closing BufferedWriter Stream
         bw.close();
-
         System.out.println("Data successfully appended at the end of file");
-
-    System.out.println("Data successfully appended at the end of file");
+        System.out.println("Data successfully appended at the end of file");
 
       }catch(IOException ioe){
          System.out.println("Exception occurred:");

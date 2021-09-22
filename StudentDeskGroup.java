@@ -27,6 +27,8 @@ public class StudentDeskGroup extends Actor
      * @author (your name (add your groups names here, and tie to any method that you add) 
      * @version (a version number or a date. Update this for each revision)
      */
+    StudentDesk studentDesk = new StudentDesk();
+    private int deskGroup = studentDesk.getDeskGroup();
     //public List<String> Images= new List<String>();
     public void act() 
     {
