@@ -17,7 +17,11 @@ CONTRIBUTERS:               Kilgore Trout
 USER INSTRUCTIONS:
 
 
+<<<<<<< HEAD
 1) Start git bash (assuming that you are using git bash) or terminal (MacOS). 
+=======
+1) Start git bash (assuming that you are using git bash). 
+>>>>>>> 6b7cceb (Updating the readme, and studentDeskGroup for current instructions)
 NOTE: Each class build-master should fork the main repo to a new repo before starting. Names below should be updated accordingly
 
 2) Move to a directory where you want to keep your work. For instance, cd c:/ then cd Users/YourName/Documents/Assignments
@@ -40,6 +44,40 @@ https://docs.google.com/document/d/1XKZFFq0f-uGaFPtmeeNShGGfIlkH2Vt8-S68Ag2YVyk/
 
 ASSIGNMENT INSTRUCTIONS IN BRIEF
 
+<<<<<<< HEAD
+1) Each student needs to create their own student file, and write a method that plays the firstlast.wav file
+while performing some kind of animation.
+=======
+(Files are case sensitive!!!)
+
+6) Check to see what has been staged (from the git command line):
+>>>>>>> 6b7cceb (Updating the readme, and studentDeskGroup for current instructions)
+
+2) Each student must implement one of the abstract classes. See KilgoreTrout.java for an example. Note the "implements" directive
+in the class declaration.
+
+3) The wav file should state your name, and say one thing unique about you, similar to the original survey.
+
+4) Each table group must implement at least one method in some other part of the scenario.  Each method of this type must
+be fully documented so that other students and table groups can use the method, if they want.  You can add methods to the
+Student, StudentDeskGroup, or even StudentDesk (if you can think of something useful).  There are a couple of suggestions
+listed in the description section of StudentDeskGroup that you write, or use as ideas.
+
+5) Before you start, each period should agree on a build-master or build-masters, and a workflow that they will use to manage
+and update the master repository.  Access rights can be assigned to groups, and currently there is a group for each classroom.
+
+
+
+<<<<<<< HEAD
+=======
+8) Push your changes to the remote repository (each period should have their own cloned or branched version to work with.
+Do not commit back to the master repo:
+
+git push
+
+
+ASSIGNMENT INSTRUCTIONS IN BRIEF
+
 1) Each student needs to create their own student file, and write a method that plays the firstlast.wav file
 while performing some kind of animation.
 
@@ -58,4 +96,5 @@ and update the master repository.  Access rights can be assigned to groups, and 
 
 
 
+>>>>>>> 6b7cceb (Updating the readme, and studentDeskGroup for current instructions)
 
