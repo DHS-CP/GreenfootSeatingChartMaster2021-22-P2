@@ -183,6 +183,22 @@ public class Classroom extends World
         // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
         // and then clicking on the inspect text
         
+        PavanSidhu pavansidhu = new PavanSidhu();
+        addObject(pavansidhu, 8,10);
+        pavansidhu.assignSeat();
+
+        KevinZhu kevinzhu = new KevinZhu();
+        addObject(kevinzhu,9,10);
+        kevinzhu.assignSeat();
+        
+        ShashankThapa shashankthapa = new ShashankThapa();
+        addObject(shashankthapa,8,9);
+        shashankthapa.assignSeat();
+        
+        SirishaVelavan sirishavelavan = new SirishaVelavan();
+        addObject(sirishavelavan,9,9);
+        sirishavelavan.assignSeat();
+
         AdvaitShewade advaitshewade = new AdvaitShewade();
         addObject(advaitshewade,6,9);
         advaitshewade.assignSeat();
@@ -344,7 +360,7 @@ public class Classroom extends World
         bw.write(s);
         //Closing BufferedWriter Stream
         bw.close();
-        System.out.println("Data successfully appended at the end of file");
+
         System.out.println("Data successfully appended at the end of file");
 
       }catch(IOException ioe){

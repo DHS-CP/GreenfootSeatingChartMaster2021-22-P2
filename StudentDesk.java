@@ -20,12 +20,14 @@ public class StudentDesk extends Actor
     private int deskGroup;
     public void act() 
     {
-        if (Greenfoot.isKeyDown("5")) {
+        if(Greenfoot.isKeyDown("m")){
+        groupmethod();
+        }
+         if (Greenfoot.isKeyDown("5")) {
             groupMethod(5); 
         }
-        // desks should not act.
-    } 
-    
+    }
+       
     public void setDeskGroup(int i){
         if (i>0 && i<9)
            deskGroup=i;
@@ -54,8 +56,6 @@ public class StudentDesk extends Actor
             
             stringList.add(firstName + lastName);
         }
-        
-  
         Random rand = new Random();
         String randomName = stringList.get(rand.nextInt(stringList.size()));
         
@@ -76,8 +76,15 @@ public class StudentDesk extends Actor
             
             Greenfoot.delay(10);
             getWorld().setBackground("csa.jpg");
-        }
     }
+}
+    public void groupmethod(){
+        GreenfootImage question = (new GreenfootImage("Question.jpg"));
+        question.scale( 60, 60);
+        this.setImage(question);
+        Greenfoot.delay(10);
+    }
+        
     public void getCurrentStudents(){
         int deskGroup = getDeskGroup();
         String[] names = {"Shah Arin", "Advait Shewade", "Eileen Xu", "Megha Suresh", "Shashank Thapa", "Sirisha Velavan", "Pavan Sidhu", "Kevin Zhu", "Jaspal Khanuja", "Elizabeth Koh", "Anya Sengupta", "Anishkumar Senthil", "Anish Kataria", "Archith Kavalipati", "Srutilaya Mani", "Amish Saini", "Namit Joshi", "Anish Kasam", "Archit Kumar", "Natalie Lui", "Vedant Agrawal", "Joshua Aguilar", "Yash Chhatre", "Bibek Das", "Siddarth Ajay", "Brighton Alcantara", "Pranav Guda", "Yougi Jain", "Anirudh Annabathula", "Vidit Batta", "Ananya  Jakilati", "Rhea John"};
