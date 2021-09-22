@@ -23,13 +23,22 @@ public class StudentDesk extends Actor
         }
         // desks should not act.
     } 
+    
     public void setDeskGroup(int i){
         if (i>0 && i<9)
            deskGroup=i;
-        }
+    }
+    
     public int getDeskGroup(){
+       return deskGroup;
+    }
+    
+    public Student getStudent(){
+        Student student = (Student) getOneIntersectingObject(Student.class);
+        return student;
         return deskGroup;
     }
+    
     public void groupMethod(int tablenum) {
         List <Student> students = getWorld().getObjects(Student.class);
         

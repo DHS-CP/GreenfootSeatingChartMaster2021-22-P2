@@ -89,6 +89,3 @@ listed in the description section of StudentDeskGroup that you write, or use as 
 
 5) Before you start, each period should agree on a build-master or build-masters, and a workflow that they will use to manage
 and update the master repository.  Access rights can be assigned to groups, and currently there is a group for each classroom.
-
-
-
